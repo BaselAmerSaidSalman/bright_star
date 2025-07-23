@@ -1,0 +1,111 @@
+/* Terms page uses the same styles as privacy policy */
+@import url('privacy.css');
+
+/* ################################################################################################################ */
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1100;
+    position: fixed;
+    top: 4em;
+    right: 2.3em;
+    background-color: transparent;
+    border: none;
+}
+
+.mobile-menu-btn span {
+    width: 30px;
+    height: 3px;
+    background: grey;
+    margin: 4px 0;
+    border-radius: 3px;
+    transition: all 0.4s ease;
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    color: #0a0a0a;
+    z-index: 1050;
+    transition: right 0.4s ease;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu-header {
+    padding: 20px;
+    background: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.mobile-menu-links, .mobile-menu-icons {
+    padding: 15px;
+}
+
+.mobile-menu-links a,
+.mobile-menu-icons a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 10px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.mobile-menu-links a:hover,
+.mobile-menu-icons a:hover {
+    background-color: #f0f0f0;
+    color: #007bff;
+}
+/* ################################################################################################################ */
+
+@media (max-width: 1100px) {
+    body {
+        font-size: 15px;
+        overflow-x: hidden;
+    }
+/* ################################################################################################################ */
+    .mobile-menu-btn {
+        display: flex;
+        position: absolute;
+        top: 3.1em
+    }
+
+    .mobile-menu {
+        display: block;
+        right: -100%;
+    }
+    .mobile-menu.active {
+        right: 0;
+    }
+/* ################################################################################################################ */
+}
+
+@media (max-width: 480px) {
+    .mobile-menu {
+        width: 100%;
+    }
+}

@@ -1,0 +1,416 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ################################################################################################################ */
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1100;
+    position: fixed;
+    top: 4em;
+    right: 2.3em;
+    background-color: transparent;
+    border: none;
+}
+
+.mobile-menu-btn span {
+    width: 30px;
+    height: 3px;
+    background: grey;
+    margin: 4px 0;
+    border-radius: 3px;
+    transition: all 0.4s ease;
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    color: #0a0a0a;
+    z-index: 1050;
+    transition: right 0.4s ease;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu-header {
+    padding: 20px;
+    background: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.mobile-menu-links, .mobile-menu-icons {
+    padding: 15px;
+}
+
+.mobile-menu-links a,
+.mobile-menu-icons a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 10px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.mobile-menu-links a:hover,
+.mobile-menu-icons a:hover {
+    background-color: #f0f0f0;
+    color: #007bff;
+}
+/* ################################################################################################################ */
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: transparent;
+    padding: 1em 2em;
+    transition: all ease 0.5s;
+}
+.scrolled {
+    transition: all 0.4s ease;
+    background-color: #ffffff;
+    color: #0a0a0a;
+}
+
+nav img {
+    width: 10em;
+    height: 10em;
+}
+
+nav a:first-child {
+    text-decoration: none;
+}
+
+.right_icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.right_icons a {
+    margin: 0 1em;
+    color: #c0bbbb;
+    transition: all 0.3s ease;
+}
+.right_icons a:hover {
+    color: #ffcc00;
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-10%);
+}
+
+.nav_links a:first-child {
+    text-decoration: none;
+}
+
+.nav_links h2 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+    color: #9b9292;
+}
+
+.nav_links h2:hover {
+    color: #ffcc00;
+}
+
+.nav_links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-right: 1em;
+}
+
+.nav_links ul li {
+    margin: 0 1.5em 0 0;
+}
+
+.nav_links ul li:last-child {
+    margin-right: 1em;
+}
+
+.nav_links ul li a {
+    text-decoration: none;
+    color: #c0bbbb;
+    transition: all 0.3s ease;
+}
+
+.nav_links ul li a:hover {
+    color: #ffcc00;
+}
+
+.blog {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    padding: 8em 0 4em 0
+}
+.blog h1 {
+    font-size: 3.5em;
+    font-weight: 600;
+    margin-bottom: 0.3em;
+    text-align: center;
+}
+
+.blog_content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 30px;
+}
+
+/* تصميم كل منتج */
+.blog_item {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 240px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* تأثير hover */
+.blog_item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* صورة المنتج */
+.blog_item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* اسم المنتج */
+.blog_item h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* وصف المنتج */
+.blog_item p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* سعر المنتج */
+.blog_item p strong {
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.blog_item button {
+    display: inline-block;
+    margin: 8px 5px 0 0;
+    padding: 10px 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+.blog_item button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    padding: 3em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    text-align: center;
+}
+
+.left_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer ul li {
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #8c8c8c;
+    transition: all 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #ffcc00;
+}
+
+.social_icons a {
+    margin: 0 0.2em;
+    transition: all 0.3s ease;
+}
+.social_icons a:hover {
+    color: #ffcc00;
+}
+
+@media (max-width: 1100px) {
+    body{
+        overflow-x: hidden;
+        font-size: 15px;
+    }
+/* ################################################################################################################ */
+    .mobile-menu-btn {
+        display: flex;
+        position: absolute;
+        top: 3.1em;
+    }
+
+    .nav_links, .right_icons {
+        display: none;
+    }
+/* ################################################################################################################ */
+    /* Shop section adjustments */
+    .blog {
+        padding: 8em 0 2em 0 !important;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .blog h1 {
+        font-size: 4em;
+        margin-bottom: 0;
+    }
+
+    /* Footer responsive adjustments */
+    footer {
+        flex-direction: column;
+        padding: 2em 0;
+        gap: 2em;
+    }
+
+    .left_footer, .center_footer, .right_footer {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5em;
+    }
+
+    footer ul li {
+        text-align: center;
+        margin-bottom: 0.3em;
+    }
+
+    .social_icons {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    /* Navigation adjustments */
+    nav {
+        padding: 0.5em 1em;
+        height: 15vh;
+    }
+
+    nav img {
+        width: 6em;
+        height: 6em;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-menu {
+        width: 100%;
+    }
+
+    .blog {
+        padding: 8em 0 2em 0 !important;
+    }
+
+    .blog h1 {
+        font-size: 3em;
+    }
+
+    nav img {
+        width: 8em;
+        height: 8em;
+        position: absolute;
+        top: 0;
+    }
+
+    .header_social_icons a {
+        padding: 0.4em;
+        margin: 0 0.3em;
+    }
+}

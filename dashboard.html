@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bright Star - Dashboard</title>
+        <link rel="stylesheet" href="CSS/dashboard.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        <link rel="icon" href="Images/B.K__2_-removebg-preview.png" type="image/png">
+    </head>
+    <body>
+        <div class="overlay"></div>
+        <div class="dashboard_header_add_blog">
+            <h1>Add Blog</h1>
+            <form class="dashboard_header_add_blog_form">
+                <input type="text" class="blog_name" placeholder="Blog Name">
+                <input type="text" class="blog_headline" placeholder="Blog Headline">
+                <textarea placeholder="Blog Description"></textarea>
+                <label class="custom-file-upload">
+                    <input type="file" id="blogImage">
+                    Upload Blog Image
+                </label>                 
+                <button>Add Blog</button>
+            </form>
+        </div>
+        <div class="dashboard">
+            <div class="dashboard_header">
+                <div class="dashboard_header_blogs_management">
+                    <h1>Blogs Management</h1>
+                    <button>+Add Blog</button>
+                </div>
+            </div>
+            <div class="dashboard_content">
+                <div class="blogs_show">
+
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1200,
+            });
+        </script>
+        <script src="JS/dashboard.js"></script>
+    </body>
+</html>
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bright Star - Blog</title>
+        <link rel="stylesheet" href="CSS/blogs.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        <link rel="icon" href="Images/B.K__2_-removebg-preview.png" type="image/png">
+    </head>
+    <body>
+        <!-- <div class="overlay"></div> -->
+        <header>
+            <nav>
+                <a href="index.html"><img src="Images/B.K__2_-removebg-preview.png" alt="Bright Star Logo 1" data-aos="zoom-in"></a>
+                <div class="nav_links" data-aos="zoom-in">
+                    <a href="index.html"><h2 data-aos="zoom-in">Bright Star</h2></a>
+                    <ul data-aos="zoom-in">
+                        <li><a href="index.html" data-aos="zoom-in">Shop</a></li>
+                        <li><a href="about.html" data-aos="zoom-in">About</a></li>
+                        <li><a href="blogs.html" data-aos="zoom-in">Blogs</a></li>
+                        <li><a href="contact.html" data-aos="zoom-in">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="right_icons" data-aos="zoom-in">
+                    <a href="signup.html" data-aos="zoom-in"><i class="fas fa-user"></i></a>
+                    <a href="#" data-aos="zoom-in"><i class="fas fa-search"></i></a>
+                </div>
+
+                <div id="mobileMenuBtn" class="mobile-menu-btn" data-aos="zoom-in">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="mobile-menu" id="mobileMenu">
+                    <div class="mobile-menu-header">
+                        <h2>Bright Star</h2>
+                    </div>
+                    <div class="mobile-menu-links">
+                        <a href="index.html"><i class="fas fa-home"></i> Shop</a>
+                        <a href="about.html"><i class="fas fa-th-large"></i> About</a>
+                        <a href="blogs.html"><i class="fas fa-blog"></i> Blogs</a>
+                        <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                    </div>
+                    <div class="mobile-menu-icons">
+                        <a href="signup.html"><i class="fas fa-user"></i> Account</a>
+                        <a href="#"><i class="fas fa-search"></i> Search</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="blog" data-aos="zoom-in">
+            <h1 data-aos="zoom-in">Blogs</h1>
+            <div class="blog_content" data-aos="zoom-in">
+
+            </div>
+        </div>
+
+        <footer data-aos="zoom-in">
+            <div class="left_footer" data-aos="zoom-in">
+                <h2 data-aos="zoom-in">Bright Star</h2>
+                <ul data-aos="zoom-in">
+                    <li><a href="index.html" data-aos="zoom-in">Shop</a></li>
+                    <li><a href="about.html" data-aos="zoom-in">About</a></li>
+                    <li><a href="blogs.html" data-aos="zoom-in">Blogs</a></li>
+                    <li><a href="contact.html" data-aos="zoom-in">Contact</a></li>
+                </ul>
+            </div>
+            <div class="center_footer" data-aos="zoom-in">
+                <h2 data-aos="zoom-in">Policies</h2>
+                <ul data-aos="zoom-in">
+                    <li><a href="privacy.html" data-aos="zoom-in">Privacy Policy</a></li>
+                    <li><a href="terms.html" data-aos="zoom-in">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="right_footer">
+                <h2>Follow Us</h2>
+                <div class="social_icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const blogs = JSON.parse(localStorage.getItem("blogs")) || [];
+                const blogContainer = document.querySelector(".blog_content");
+
+                if (blogs.length === 0) {
+                    blogContainer.innerHTML = "<p>No products available.</p>";
+                    return;
+                }
+
+                blogs.forEach((blog, index) => {
+                    const item = document.createElement("div");
+                    item.className = "blog_item";
+                    item.innerHTML = `
+                        <img src="${blog.image}" alt="${blog.name}">
+                        <h3>${blog.name}</h3>
+                        <h4>${blog.headline}</h4>
+                        <p>${blog.description}</p>
+                    `;
+                    blogContainer.appendChild(item);
+                });
+            });
+        </script> -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1200,
+            });
+        </script>
+        <script src="JS/blogs.js"></script>
+    </body>
+</html>
